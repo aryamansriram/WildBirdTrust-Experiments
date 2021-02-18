@@ -10,4 +10,6 @@ def read_predcsv(pred_path):
 if __name__=="__main__":
     pred_path = "Data/transfer_01_predictions.csv"
     df = read_predcsv(pred_path)
-    print(df.head())
+    ones = df[df["[Birds]Vs[EverythingElse]_Prediction"]==1]
+    zs = df[df["[Birds]Vs[EverythingElse]_Prediction"]==0]
+
